@@ -13,18 +13,18 @@ void Person::setdiscountReason(string discountreason){
 		discountReason = discountreason;
 		}   
 
-int Person::statusCheck(){
+string Person::statusCheck(){
 	if(discountReason == "Veteran"||age<=3)
 	{
-		return 1;
+		return "free";
 	}
 
 	if(age > 50 || age < 12 && age>3 || discountReason=="Student"|| discountReason == "Elderly") {
-		return 2;
+		return "reduced";
 	}
 
 	else{
-		return 0;
+		return "normal";
 	}	
 }
 
