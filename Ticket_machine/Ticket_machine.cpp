@@ -46,7 +46,7 @@ int main() {
 				cin >> card_number;
 				int iscorrect = accountManager.verifyAccount(card_number);
 			if (iscorrect == 1) {
-				cout << "Account verified" << endl;
+				cout << "Account verified\n" << endl;
 
 
                 while (true) {
@@ -61,7 +61,7 @@ int main() {
                                 person.getLastName(),
                                 aski("Input ticket duration HHMM format (eg. 01:23 would be 123)")
                             ));
-                            cout << "Your ticket:" << endl;
+                            cout << "\nYour ticket:" << endl;
                             tickets.back().showinfo();
                       
                     

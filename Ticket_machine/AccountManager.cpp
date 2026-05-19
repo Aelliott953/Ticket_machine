@@ -39,10 +39,10 @@ void AccountManager::createAccount(string firstName, string lastName, int birthY
   	ll << person.birthYear;
   	string birthYear_string = ll.str();
   	
-  	MyFile << "First name: " + person.firstName + "\nLast name: " + person.lastName + "\nBirth year: " + birthYear_string;
+  	MyFile << "First name: " + person.firstName + "\nLast name: " + person.lastName + "\nBirth year: " + birthYear_string + "\nDiscount reason: " + person.discountReason;
   	MyFile.close();
   	
-  	cout << "Account successfully created" << endl;		
+  	cout << "Account successfully created\n" << "Account number: " << cardNumber << endl;
 }
 
 bool AccountManager::fileExists(const std::string& filename) { //Verifies if the file exists
@@ -85,6 +85,10 @@ bool AccountManager::verifyAccount(int cardNumber) {  // Verifies if the account
 
                     else if (label == "Birth year"){ 
                         person.birthYear = stoi(value);
+                    }
+
+                    else if (label == "Discount reason") {
+                        person.discountReason = value;
                     }
                         
                 }

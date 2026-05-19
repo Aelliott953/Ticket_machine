@@ -1,3 +1,0 @@
-First name: Alex
-Last name: E
-Birth year: 2005

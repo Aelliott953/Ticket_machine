@@ -1,0 +1,4 @@
+First name: Phillip
+Last name: Spencer
+Birth year: 1999
+Discount reason: Veteran
