@@ -8,8 +8,9 @@ using namespace std;
 
 int getcurtime() {
     time_t now = time(nullptr);
-    tm* local = localtime(&now);
-    return local->tm_hour * 100 + local->tm_min;
+    tm local{};
+    localtime_s(&local, &now);
+    return local.tm_hour * 100 + local.tm_min;
 }
 
 int aski(const string& q) {
@@ -18,6 +19,12 @@ int aski(const string& q) {
     cin >> ans;
     return ans;
 }
+string asks(const string& q) {
+    string ans;
+    cout << q << endl;
+    cin >> ans;
+    return ans;
+};
 
 string choosetype() {
     int option;
@@ -66,4 +73,13 @@ int subtractime(int t1, int t2) {
 
 int addtime(int t1, int t2) {
     return fromminutes(tominutes(t1) + tominutes(t2));
+}
+string translatetype(int num) {
+
+	switch (num) {
+	case 0: return "normal";
+	case 1: return "free";
+	case 2: return "reduced";
+	default: return "normal";
+	}
 }

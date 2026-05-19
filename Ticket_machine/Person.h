@@ -19,7 +19,11 @@ class Person {
 		string getdiscountReason();
 		int statusCheck();
 		int calculateAge();
-		
+
+		// Accessors for first and last name so external code can read private fields
+		string getFirstName();
+		string getLastName();
+
 		friend class AccountManager;
 };
 

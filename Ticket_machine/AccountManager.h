@@ -11,7 +11,7 @@ private:
 public:
     AccountManager(Person& person);
     void createAccount(string firstName, string lastName, int birthYear, string discountReason);
-    void verifyAccount(int cardNumber);
+    bool verifyAccount(int cardNumber);
     bool fileExists(const std::string& filename);
     
 };
