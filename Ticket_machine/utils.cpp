@@ -74,12 +74,4 @@ int subtractime(int t1, int t2) {
 int addtime(int t1, int t2) {
     return fromminutes(tominutes(t1) + tominutes(t2));
 }
-string translatetype(int num) {
 
-	switch (num) {
-	case 0: return "normal";
-	case 1: return "free";
-	case 2: return "reduced";
-	default: return "normal";
-	}
-}

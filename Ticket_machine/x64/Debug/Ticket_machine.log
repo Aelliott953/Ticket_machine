@@ -1,2 +1,6 @@
-﻿  AccountManager.cpp
+﻿  Ticket.cpp
+C:\Users\Administrator\source\repos\Ticket_machine3\Ticket_machine\Ticket.cpp(33,22): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Ticket_machine.cpp
+  utils.cpp
+  Generating Code...
   Ticket_machine.vcxproj -> C:\Users\Administrator\source\repos\Ticket_machine3\x64\Debug\Ticket_machine.exe

@@ -13,5 +13,5 @@ int fromminutes(int minutes);
 string formatime(int hhmm);
 int subtractime(int t1, int t2);
 int addtime(int t1, int t2);
-string translatetype(int num);
+
 #endif

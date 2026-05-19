@@ -53,10 +53,10 @@ int main() {
                     
                    
                     
-                       
+                    person.age = person.calculateAge();
                             tickets.push_back(Ticket(
                                 getcurtime(),
-                                translatetype(person.statusCheck()),
+                                person.statusCheck(),
                                 person.getFirstName(),
                                 person.getLastName(),
                                 aski("Input ticket duration HHMM format (eg. 01:23 would be 123)")

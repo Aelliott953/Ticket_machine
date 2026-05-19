@@ -17,7 +17,7 @@ class Person {
 		Person();	
 		void setdiscountReason(string discountreason);
 		string getdiscountReason();
-		int statusCheck();
+		string statusCheck();
 		int calculateAge();
 
 		// Accessors for first and last name so external code can read private fields
