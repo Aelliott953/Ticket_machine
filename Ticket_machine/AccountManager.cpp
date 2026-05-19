@@ -50,7 +50,7 @@ bool AccountManager::fileExists(const std::string& filename) { //Verifies if the
     return file.good();
 }
 
-void AccountManager::verifyAccount(int cardNumber) {  // Verifies if the account exists and if it does, it reads the information from the file and displays it
+bool AccountManager::verifyAccount(int cardNumber) {  // Verifies if the account exists and if it does, it reads the information from the file and displays it
 	try{
 		stringstream ss;
   	
@@ -61,7 +61,7 @@ void AccountManager::verifyAccount(int cardNumber) {  // Verifies if the account
 		string filepath = "accounts/" + card + ".txt";
 		
 		if(fileExists(filepath)){
-			cout << "Account found" << endl;
+			cout << "Account found" << endl<<endl;
 			cout << card << endl;
 			ifstream file(filepath);
             string line;
@@ -95,12 +95,14 @@ void AccountManager::verifyAccount(int cardNumber) {  // Verifies if the account
 			string lastName = person.lastName;
 			int birthYear = person.birthYear;
 			cout << "First name: " + firstName + "\nLast name: " + lastName + "\nBirth year: " + to_string(birthYear) << endl;
+            return 1;
 		}
 		else{
 			throw 505;
-		}			
+		} 			
 	}
-	catch(int errorCode){
+	catch(int){
 		cout << "Error, account not found!" << endl;
+		return 0;
 	}
 }

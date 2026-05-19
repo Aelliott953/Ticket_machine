@@ -128,13 +128,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AccountManager.cpp" />
+    <ClCompile Include="Ticket.cpp" />
     <ClCompile Include="Ticket_machine.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountManager.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Ticket.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
